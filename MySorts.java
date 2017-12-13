@@ -3,10 +3,53 @@
 //
 // 2017-12-13
 
+import java.util.ArrayList;
+
 public class MySorts {
     // VOID version of SelectionSort
     // Rearranges elements of input ArrayList
     // postcondition: data's elements sorted in ascending order
+
+    public static void bubbleSortV( ArrayList<Comparable> data){
+
+	int swapCount = 0;
+
+	int oldCount = 0;
+
+	Comparable swapIt;
+
+	for (int passes = 0; passes < data.size() - 1; passes +=1){
+      
+	    for ( int current = 0; current < data.size() - 1; current += 1){
+		oldCount = swapCount;
+	      
+		if (data.get(current).compareTo(data.get(current + 1)) > 0){
+
+		    swapCount += 1;
+
+		    swapIt = data.get(current);
+
+		    data.set(current, data.get(current + 1));
+
+		    data.set(current + 1, swapIt);
+
+		}
+	    }
+
+	}
+
+	if (oldCount == swapCount){
+
+	    return;
+	}
+	else{
+
+	    bubbleSortV(data);
+	}
+    }
+
+
+    
     public static void selectionSortV( ArrayList<Comparable> data ) 
     {
 	//note: this version places greatest value at rightmost end,
@@ -15,17 +58,17 @@ public class MySorts {
 	int maxPos;
 
 	for( int pass = data.size()-1; pass > 0; pass-- ) {
-	    System.out.println( "\nbegin pass " + (data.size()-pass) );//diag
+	    
 	    maxPos = 0;
 	    for( int i = 1; i <= pass; i++ ) {
-		System.out.println( "maxPos: " + maxPos );//diag
-		System.out.println( data );//diag
+	        
 		if ( data.get(i).compareTo( data.get(maxPos) ) > 0 )
 		    maxPos = i;
 	    }
 	    data.set( maxPos, ( data.set( pass, data.get(maxPos) ) ) );
-	    System.out.println( "after swap: " +  data );//diag
+	    
 	}
+    }
 	// VOID version of InsertionSort
 	// Rearranges elements of input ArrayList
 	// postcondition: data's elements sorted in ascending order
@@ -43,4 +86,4 @@ public class MySorts {
 		}
 	    }	
 	}//end insertionSortV
-    }//end selectionSortV
+}
