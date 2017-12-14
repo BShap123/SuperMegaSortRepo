@@ -1,14 +1,27 @@
 // Team NOOOOO Ben Shapiro and Zane Wang
 // APCS1 pd1
-// HW54 -- One File to Bind Them All
-// 2017-12-13
+// HW55 -- Never Fear, Big Oh Is Here! 
+// 2017-12-14
 
 import java.util.ArrayList;
 
 public class MySorts {
-    // VOID version of SelectionSort
+    // VOID version of BubbleSort
     // Rearranges elements of input ArrayList
     // postcondition: data's elements sorted in ascending order
+
+    /* bubbleSort:
+       Execution times:
+       n = 1, best case time = 1, worst case time = 1 //assumes that a simple pass through equals one "time"
+       n = 10, best case time = 1, worst case time = 90
+       n = 100, best case time = 1, worst case time = 9,900
+       n = 1000, best case time = 1, worst case time = 999,000
+       n times, best case time = 1, worst case time = n^2 - n
+
+       bubbleSort performs n-1 passes, and interacts with each element n times (once for each element) so therefore performs an operation
+       n * n - 1 times, or n^2 - n times.
+      
+    */
 
     public static void bubbleSort( ArrayList<Comparable> data){
 
@@ -44,11 +57,26 @@ public class MySorts {
 	}
 	else{
 
-	    bubbleSortV(data);
+	    bubbleSort(data);
 	}
     }
 
+    // VOID version of SelectionSort
+    // Rearranges elements of input ArrayList
+    // postcondition: data's elements sorted in ascending order
 
+    /* selectionSort:
+       Execution times:
+       n = 1, best case time = 1, worst case time = 1 //assumes that a simple pass through equals one "time"
+       n = 10, best case time = 1, worst case times = 90
+       n = 100, best case time = 1, worst case times = 9,900
+       n = 1000, best case time = 1, worst case times = 999,000
+       n times, best case time = 1, worst case times = n^2 - n
+
+       selectionSort performs n-1 passes, and interacts with each element n times (once for each element) so therefore performs an operation
+       n * n - 1 times, or n^2 - n times.
+    */
+       
     
     public static void selectionSort( ArrayList<Comparable> data ) 
     {
@@ -72,6 +100,15 @@ public class MySorts {
 	// VOID version of InsertionSort
 	// Rearranges elements of input ArrayList
 	// postcondition: data's elements sorted in ascending order
+
+        /* insertionSort:
+	   Execution times:
+	   n = 1, best case time = 1, worst case time = 1 //assumes that a simple pass through equals one "time"
+	   n = 10, best case time = 1, worst case times = 
+	  
+
+	 */
+    
 	public static void insertionSort( ArrayList<Comparable> data )
 	{
 	    // each pass will increase the number of sorted elements by 1
