@@ -1,6 +1,6 @@
 // Team NOOOOO Ben Shapiro and Zane Wang
 // APCS1 pd1
-//
+// HW54 -- One File to Bind Them All
 // 2017-12-13
 
 import java.util.ArrayList;
@@ -10,7 +10,7 @@ public class MySorts {
     // Rearranges elements of input ArrayList
     // postcondition: data's elements sorted in ascending order
 
-    public static void bubbleSortV( ArrayList<Comparable> data){
+    public static void bubbleSort( ArrayList<Comparable> data){
 
 	int swapCount = 0;
 
@@ -50,7 +50,7 @@ public class MySorts {
 
 
     
-    public static void selectionSortV( ArrayList<Comparable> data ) 
+    public static void selectionSort( ArrayList<Comparable> data ) 
     {
 	//note: this version places greatest value at rightmost end,
 
@@ -72,7 +72,7 @@ public class MySorts {
 	// VOID version of InsertionSort
 	// Rearranges elements of input ArrayList
 	// postcondition: data's elements sorted in ascending order
-	public static void insertionSortV( ArrayList<Comparable> data )
+	public static void insertionSort( ArrayList<Comparable> data )
 	{
 	    // each pass will increase the number of sorted elements by 1
 	    for (int sorted = 1; sorted < data.size(); sorted++) {
