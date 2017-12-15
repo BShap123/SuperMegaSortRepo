@@ -6,23 +6,50 @@
 import java.util.ArrayList;
 
 public class MySorts {
-    // VOID version of BubbleSort
-    // Rearranges elements of input ArrayList
-    // postcondition: data's elements sorted in ascending order
+
+    /* add(ArrayList):
+       Execution times:
+       n = 1, best case time = 0, worst case time = 0 (assumes that a simple
+       pass through equals one "time")
+       n = 10, best case time = 0, worst case time = 0
+       n = 100, best case time = 0, worst case time = 0
+       n = 1000, best case time = 0, worst case time = 0
+       n times, best case time = 0, worst case time = 0
+       
+       add() performs 0 passes by performing an operation at final index. 
+       Thus, it is O(0).
+    */
+
+    /* add(ArrayList, index):
+       Execution times:
+       n = 1, best case time = 0, worst case time = 1 (assumes that a simple
+       pass through equals one "time")
+       n = 10, best case time = 0, worst case time = 1
+       n = 100, best case time = 0, worst case time = 1
+       n = 1000, best case time = 0, worst case time = 1
+       n times, best case time = 0, worst case time = 1
+       
+       add(index) performs 1 pass, starting from the back end, and interacts 
+       with each element before that index. Thus, it is O(1).
+    */
 
     /* bubbleSort:
        Execution times:
-       n = 1, best case time = 1, worst case time = 1 //assumes that a simple pass through equals one "time"
+       n = 1, best case time = 1, worst case time = 1 (assumes that a simple 
+       pass through equals one "time")
        n = 10, best case time = 1, worst case time = 90
        n = 100, best case time = 1, worst case time = 9,900
        n = 1000, best case time = 1, worst case time = 999,000
        n times, best case time = 1, worst case time = n^2 - n
-
+       
        bubbleSort performs n-1 passes, and interacts with each element n times (once for each element) so therefore performs an operation
        n * n - 1 times, or n^2 - n times.
-      
+       
     */
-
+    
+    // VOID version of BubbleSort
+    // Rearranges elements of input ArrayList
+    // postcondition: data's elements sorted in ascending order
     public static void bubbleSort( ArrayList<Comparable> data){
 
 	int swapCount = 0;
@@ -61,21 +88,23 @@ public class MySorts {
 	}
     }
 
+    /* selectionSort:
+       Execution times:
+       n = 1, best case time = 1, worst case time = 1 (assumes that a simple 
+       pass through equals one "time")
+       n = 10, best case time = 1, worst case times = 10
+       n = 100, best case time = 1, worst case times = 100
+       n = 1000, best case time = 1, worst case times = 1000
+       n times, best case time = 1, worst case times = n
+
+       selectionSort performs 1 passes, and interacts with each element 1 time
+       so therefore performs an operation n times. Thus, it is O(n);
+    */
+
+    
     // VOID version of SelectionSort
     // Rearranges elements of input ArrayList
     // postcondition: data's elements sorted in ascending order
-
-    /* selectionSort:
-       Execution times:
-       n = 1, best case time = 1, worst case time = 1 //assumes that a simple pass through equals one "time"
-       n = 10, best case time = 1, worst case times = 90
-       n = 100, best case time = 1, worst case times = 9,900
-       n = 1000, best case time = 1, worst case times = 999,000
-       n times, best case time = 1, worst case times = n^2 - n
-
-       selectionSort performs n-1 passes, and interacts with each element n times (once for each element) so therefore performs an operation
-       n * n - 1 times, or n^2 - n times.
-    */
        
     
     public static void selectionSort( ArrayList<Comparable> data ) 
@@ -97,17 +126,25 @@ public class MySorts {
 	    
 	}
     }
+
+    /* insertionSort:
+       Execution times:
+       n = 1, best case time = 1, worst case time = 1 //assumes that a simple 
+       pass through equals one "time"
+       n = 10, best case time = 10, worst case times = 10
+       n = 100, best case time = 100, worst case times = 100
+       n = 1000, best case time = 1000, worst case times = 1000
+       n times, best case time = n, worst case times = n
+
+       insertionSort performs n-1 passes, and interacts with each element until
+       it has reached it's final position so therefore performs an operation
+       n^2 times. Thus, it is O(n^2).
+    */
+
 	// VOID version of InsertionSort
 	// Rearranges elements of input ArrayList
 	// postcondition: data's elements sorted in ascending order
 
-        /* insertionSort:
-	   Execution times:
-	   n = 1, best case time = 1, worst case time = 1 //assumes that a simple pass through equals one "time"
-	   n = 10, best case time = 1, worst case times = 
-	  
-
-	 */
     
 	public static void insertionSort( ArrayList<Comparable> data )
 	{
